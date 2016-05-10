@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+<script src="https://kathmandulivinglabs.github.io/mc-dash-v2/js/leaflet.js"></script>
+<link rel="stylesheet" href="https://kathmandulivinglabs.github.io/mc-dash-v2/css/leaflet.css"/>
+</head>
+<body>
+<div id='map'></div>
+<style>
+#map{
+  width: 600px;
+  height: 400px;
+}
+</style>
+<script>
+var map = L.map('map', {
+    center: [28.2554328,83.9769318],
+    zoom: 16
+});
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{maxZoom:22}).addTo(map);
+
+
+L.tileLayer('https://kathmandulivinglabs.github.io/PokharaAdminBuilding/{z}/{x}/{y}.png',{"tms":true, maxZoom:22}).addTo(map);
+
+</script>
+</body>
